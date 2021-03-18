@@ -88,10 +88,11 @@ let hungry = [
 // 15b
 for (word of hungry){
     document.querySelector(`body`).append(document.createElement(`span`).innerText = `${word} `);
-}
 
 // Or
 // const body1 = document.querySelector(`body`);
 // const span = document.createElement(`span`);
 // span.innerText = `${word} `;
 // body1.append(span);
+
+}
