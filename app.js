@@ -19,21 +19,18 @@ const pTags = document.querySelectorAll('p');
 const h1 = document.querySelector(`h1`);
 
 // 6b
-const h1InnerText = h1.innerText
 h1.innerText = "Matt's Favorite Places To Eat In Sweet Home Chicago!";
 
 // 7a
 const others = document.getElementById(`others`);
 
 // 7b
-const othersHTML = others.innerHTML;
 others.innerHTML = `<h3>Other Favorites</h3>`;
 
 // 8a
 const aTag = document.querySelector('a');
 
 // 8b
-const aTagHref = aTag.href;
 aTag.href = "https://www.choosechicago.com/articles/food-drink/5-classic-chicago-foods/";
 
 // 9
@@ -62,10 +59,39 @@ h5.innerText = "See you in the Windy City Sometime!";
 aTag.insertAdjacentElement(`afterend`, h5);
 
 // 13
-const firstLI = document.querySelector(`ul li`);
+const firstLI = document.querySelector(`li`);
 firstLI.remove();
+// Written on one line
+// document.querySelector(`li`).remove();
 
 // BONUS
 
 // 14a
 const divs = document.getElementsByTagName("div");
+
+// 14b
+for (div of divs){
+    div.classList.toggle(`background`);
+}
+
+// 15a
+let hungry = [
+    "Thanks",
+    "A",
+    "Lot",
+    "Now",
+    "I",
+    "Am",
+    "Hungry"
+];
+
+// 15b
+for (word of hungry){
+    document.querySelector(`body`).append(document.createElement(`span`).innerText = `${word} `);
+}
+
+// Or
+// const body1 = document.querySelector(`body`);
+// const span = document.createElement(`span`);
+// span.innerText = `${word} `;
+// body1.append(span);
